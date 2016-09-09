@@ -12,6 +12,9 @@ const argv = require('minimist')(process.argv.slice(2));
 const isDev = process.env.NODE_ENV !== 'production';
 const resolve = require('path').resolve;
 
+const mongoose = require('mongoose');
+mongoose.Promise = global.Promise;
+
 
 const app = express();
 
