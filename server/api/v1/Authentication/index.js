@@ -97,11 +97,11 @@ router.post('/login', (req, res) => {
         res.json({ token });
       } else {
         // Invalid password
-        res.status(401).json({ errors: { form: 'INVALID_CREDENTIALS' } });
+        res.status(401).json({ errors: { form: ['INVALID_CREDENTIALS'] } });
       }
     } else {
       // No such user was found
-      res.status(401).json({ errors: { form: 'INVALID_CREDENTIALS' } });
+      res.status(401).json({ errors: { form: ['INVALID_CREDENTIALS'] } });
     }
   });
 });
